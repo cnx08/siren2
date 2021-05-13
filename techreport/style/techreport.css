@@ -1,0 +1,23 @@
+
+div.LabelBt {
+    border: 1px solid #bbbaba;
+    cursor: pointer;
+    float: left;
+    height: 250px;
+    margin: 7px;
+    padding-top: 10px;
+    text-align: center;
+    width: 230px;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+}
+.Options{
+    font-family: Verdana;
+    font-size: 11px;
+   
+}
+.separator{
+    width: 99%;
+    height: 70px; 
+}

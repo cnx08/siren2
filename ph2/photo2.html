@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+   
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="style/photo.css">
+        <link rel="stylesheet" href="../gstyles/jquery-ui.css">
+        <link rel="stylesheet" href="../gstyles/jquery-ui.theme.css">
+        <link rel="stylesheet" href="../gstyles/jquery-ui.structure.css">
+        <link rel="stylesheet" type="text/css" href="../gstyles/jquery.gritter.css" />
+        
+        <script type="text/javascript" src="../gscripts/jquery/lib/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="../gscripts/jquery/lib/jquery-ui.js"></script>
+        <script type="text/javascript" src="script/photo2.js"></script>
+        <script type="text/javascript" src="../gscripts/jquery.gritter.js"></script>
+    </head>
+   
+    <body>
+        <div class="main" id="main"> 
+            <div id="left_window" class="left_window">
+                <div id="left_photo" class="left_photo">
+                     <img id="left_ph"  src="img/photo.jpg" alt="фотография сотрудника">
+                </div>
+                <div  id="left_info" class="left_info">
+                   <p>Время: <span id="time_str1" class="res_text"></span></p>
+                   <p>Событие: <span id="code_descr1" class="res_text"></span></p>
+                   <p>ФИО: <span id="FIO1" class="res_text"></span></p>
+                   <p><span class="dep">Отдел: <span id="dept1" class="res_text"></span></span></p>
+                   <p><span class="pos">Должность: <span id="position1" class="res_text"></span></span></p>
+                   <p><span class="sm_t">Смена: <span id="sm_time1" class="res_text"></span></span><span class="sm_d"> Обед: <span id="sm_dinner1" class="res_text"></span></span></p>
+                </div>
+                <div id="left_photo_stripe" class="left_photo_stripe"></div>
+                <!--div id="left_video" class="left_video">
+                  <!--   <img height="300" width="400" src="../foto/video.jpg">>
+                </div-->
+           </div>
+            <div id="right_window" class="right_window">
+                <div id="right_photo" class="right_photo">
+                      <p><img id="right_ph" src="img/photo.jpg" alt="фотография сотрудника"></p>
+                </div>
+               <div id="right_info" class="right_info">
+                   <p>Время: <span id="time_str2" class="res_text"></span></p>
+                   <p>Событие: <span id="code_descr2" class="code_descr2"></span></p>                   
+                   <p>ФИО: <span id="FIO2" class="res_text"></span></p>
+                   <p><span class="dep">Отдел: <span id="dept2" class="res_text"></span></span></p>
+                   <p><span class="pos">Должность: <span id="position2" class="res_text"></span></span></p>
+                   <p><span class="sm_t">Cмена: <span id="sm_time2" class="res_text"></span></span><span class="sm_d"> Обед: <span id="sm_dinner2" class="res_text"></span></span></p>
+               </div>
+               <div id="right_photo_stripe" class="right_photo_stripe"></div>
+               <!--div id="right_video" class="right_video">
+                   <!--  <img height="300" width="400" src="../foto/video.jpg">>
+               </div-->
+           </div>
+        </div>    
+
+        <input id="first_upd_time" type="hidden" value="0">
+        <input id="second_upd_time" type="hidden" value="0">
+    </body>
+   
+</html>
+
+

@@ -1,0 +1,25 @@
+body {
+  padding-left: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.blok {
+  height: 750px;
+  width: 700px;
+  background: whitesmoke;
+  color: black;
+  overflow: scroll;
+}
+
+.code{
+  font-weight: 600;
+}
+.turn{
+  background: lightcyan;
+}
+.unit{
+  border: 2px solid lightblue;
+}

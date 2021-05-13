@@ -1,0 +1,106 @@
+/*REPLACED 08.02.08 */
+div.body{
+position:relative;
+top:0;left:0;
+width:100%;
+height:100%;
+background-color:#F5F5F5;
+display:block;
+padding:2px;
+border-bottom:1px solid silver;
+border-top:1px solid silver;
+border-left:1px solid silver;
+border-right:1px solid silver;
+}
+.select {
+border:1px solid silver;
+font-size:11px;
+font-family:Verdana;
+}
+.input{
+border:1px solid silver;
+font-size:11px;
+font-family:Verdana;
+background: url('/images/bg28.gif') top left no-repeat white; padding: 1px 4px;
+}
+.text{
+font-size:11px;
+font-family:Verdana;
+}
+.sbutton
+{
+font-size:11px;
+font-family:Verdana;
+border:1px solid silver;
+
+}
+.doctext{
+font-family:verdana;
+font-size:10px;
+font-weight:bold;
+}
+div.body{
+position:relative;
+top:0;left:0;
+width:100%;
+height:100%;
+background-color:#F5F5F5;
+display:block;
+padding:2px;
+border-bottom:1px solid silver;
+border-top:1px solid silver;
+border-left:1px solid silver;
+border-right:1px solid silver;
+}
+.list{
+position:relative;
+top:0%;
+left:0%;
+overflow:auto;
+width: 100%;
+padding:1px;
+
+background:#F5F5F5;
+}
+.listitem{
+position:relative;
+top:0px;
+left:0px;
+BORDER-TOP:1px solid silver;
+BORDER-LEFT:1px solid silver;
+BORDER-RIGHT:1px solid silver;
+BORDER-BOTTOM:1px solid silver;
+margin-top:2px;
+padding:2px;
+font-family:verdana;
+color:black;
+font-size:9px;
+text-align:left;
+}
+table.docView
+{
+   border:1px solid black;
+}
+table.docView  th
+{
+  font-family:Verdana;
+  font-size:12px;
+  text-align:left;
+  font-weight:bold;
+  padding:2px;
+  text-align:left;
+  border-bottom:1px solid black;
+  background-color:#ededed;
+  margin:2px;
+  
+}
+table.docView  td
+{
+  font-family:Verdana;
+  font-size:12px;
+  text-align:left;
+  padding:5px;
+  border-bottom:1px solid black;
+  
+}
+

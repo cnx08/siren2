@@ -1,0 +1,1 @@
+C:\wamp\bin\php\php5.6.25\php.exe C:\wamp\www\siren2\cron_files_w\cron_trully_t_pass.php

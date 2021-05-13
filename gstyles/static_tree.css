@@ -1,0 +1,132 @@
+/* контейнер просто содержит узлы.
+ Узел сам будет отвечать за свой отступ */
+.Tree-Container {
+        padding: 0;
+        margin: 0;
+}
+ 
+.Tree-Container li {
+        list-style-type: none; /* убрать кружочки/точечки */
+}
+
+/* узел отодвинут от левой стенки контейнера на 18px
+    благодаря этим отступам вложенные узлы формируют иерархию
+ */
+.Tree-Node {
+    margin-left: 18px;
+    zoom: 1; /* спецсвойство против багов IE6,7. Ставит hasLayout */
+}
+ 
+/* Корневой узел от родительского контейнера не отодвинут. 
+   Ему же не надо демонстрировать отступом, чей он сын.
+   Это правило идет после .Node, поэтому имеет более высокий приоритет 
+   Так что class="Node IsRoot" дает margin-left:0
+*/ 
+.Tree-IsRoot {
+    margin-left: 0;
+}
+
+
+/* иконка скрытого/раскрытого поддерева или листа
+    сами иконки идут дальше, здесь общие свойства
+ */
+.Tree-Expand {
+    width: 18px;
+    height: 19px;
+    /* принцип двухколоночной верстки. */
+    /* float:left и width дива Expand + margin-left дива Content */
+    float: left; 
+}
+ 
+/* содержание (заголовок) узла */
+ .Tree-Content {
+    /* чтобы не налезать на Expand */
+    margin-left:18px;
+    /* высота заголовка - как минимум равна Expand 
+        Т.е правая колонка всегда выше или равна левой.
+        Иначе нижний float будет пытаться разместиться на получившейся ступеньке
+    */    
+    min-height: 19px; 
+	cursor: default;
+	width:0%;
+	white-space:nowrap;
+	font-family:tahoma;
+	font-size:11px;
+	padding:1px;
+	
+	
+}
+ 
+ /* все правила после * html выполняет только IE6 */
+* html .Tree-Content {
+    height: 19px; /* аналог min-height для IE6 */
+}
+
+/* открытое поддерево */
+.Tree-ExpandOpen .Tree-Expand {  
+    background-image: url(treeImg/expand_minus.gif);  
+}
+ 
+/* закрытое поддерево */
+.Tree-ExpandClosed .Tree-Expand {
+    background-image: url(treeImg/expand_plus.gif);
+}
+ 
+/* лист */
+.Tree-ExpandLeaf .Tree-Expand {
+    background-image: url(treeImg/expand_leaf.gif);
+}
+
+.Tree-Node {
+    margin-left: 18px;
+    zoom: 1;
+    /* линия слева образуется повторяющимся фоновым рисунком */
+    background-image : url(treeImg/i.gif);
+    background-position : top left;
+    background-repeat : repeat-y;
+}
+/* это правило - ниже .Node, поэтому имеет больший приоритет */
+.Tree-IsLast {
+    /* добавить соединительную черточку наверх */
+    background-image: url(treeImg/i_half.gif);
+    background-repeat : no-repeat;
+}
+.Tree-ExpandOpen .Tree-Container {
+    display: block;
+}
+ 
+.Tree-ExpandClosed .Tree-Container {
+    display: none;
+}
+
+.Tree-ExpandOpen .Tree-Expand, .Tree-ExpandClosed .Tree-Expand {
+    cursor: default; /* иконки скрытия-раскрытия */
+}
+ 
+.Tree-ExpandLeaf .Tree-Expand {
+    cursor: default; /* листовой узел */
+}
+
+.Tree-ExpandLoading   
+{
+    width: 18px;
+    height: 18px;
+    float: left;
+    background-image: url(treeImg/expand_loading.gif);
+}
+
+.Tree-LeafSelected 
+{
+	background-color:navy;
+	border:1px dashed white;
+	cursor:default;
+	color:white;
+	font-weight:bold;
+	padding-left:1px;
+}
+.Tree-Node input {
+    width: 14px;
+    height: 14px;
+    float: left; 
+    margin: 2px;
+}

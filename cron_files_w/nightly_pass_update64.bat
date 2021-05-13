@@ -1,0 +1,1 @@
+C:\wamp64\bin\php\php5.6.25\php.exe C:\wamp64\www\siren2\cron_files_w\nightly_pass_update.php

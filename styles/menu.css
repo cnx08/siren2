@@ -1,0 +1,72 @@
+
+#nav, #nav ul{
+list-style: none;
+margin:0;
+padding:0;
+font: 11px/26px Verdana, Arial, Helvetica, sans-serif;
+background-color: #444;
+overflow: visible;
+width: 1000px;
+
+z-index:10000;
+}
+
+#nav{
+height: 26px;
+/*width: 100%;/*1000px;/*100%;*/				/* делаем жестко фиксировнной ширины*/
+/*width:1000px;*/
+/*overflow: visible;*/
+border: 1px solid #444444;
+}
+
+#nav a{
+display: block;
+padding: 0px 10px;
+color: #fff;
+text-decoration: none;
+text-align: center;
+/*border-right: 1px solid #000;*/
+border: none;
+width: 120px;
+}
+
+#nav a:hover{
+background-color:#ccc;
+color: #000;
+}
+
+#nav li{
+
+float:left;
+position: relative;
+
+z-index: 10000;
+}
+
+
+/* <!-- меняем цвет пункта главного меню для выпадающего списка --> */
+#nav li:hover, #nav li.jshover{
+background-color: #222;
+}
+
+#nav ul{
+border: 1px solid #000;
+border-top: 0;
+border-bottom:0;
+position: absolute;
+left: 0;
+top: 26px;
+width: 138px;	/* для IE 6 */
+display: none;
+}
+
+#nav ul a{
+border: 0;
+border-bottom: 1px solid #000;
+width: 118px;
+text-align: left;
+}
+
+#nav li:hover ul, #nav li.jshover ul{
+display:block;
+}

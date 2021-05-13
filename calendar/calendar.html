@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "	//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+    <head>
+        <title>Календарь</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="style/calendar.css">
+        <script type="text/javascript" src="../gscripts/jquery/lib/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="script/calendar.js"></script>
+        <script type="text/javascript" src="script/draw.js"></script>
+    </head>
+   
+    <body>
+        <div class="main" id="main">
+            <button onclick="ChangeYear(-1)"><</button>
+            <span id="year"></span>
+            <button onclick="ChangeYear(1)">></button>
+            <button onclick="ToBase()">Сохранить</button>
+            <button onclick="AllowEdit()">Редактировать выходные и праздничные дни</button>
+            <div id="month">
+                <table cellspacing="20">
+                    <tr>
+                        <td id="jan" class="month"></td>
+                        <td id="feb" class="month"></td>
+                        <td id="mar" class="month"></td>
+                        <td id="apr" class="month"></td>
+                    </tr>
+                    <tr>
+                        <td id="may" class="month"></td>
+                        <td id="jun" class="month"></td>
+                        <td id="jul" class="month"></td>
+                        <td id="aug" class="month"></td>
+                    </tr>
+                    <tr>
+                        <td id="sep" class="month"></td>
+                        <td id="oct" class="month"></td>
+                        <td id="nov" class="month"></td>
+                        <td id="dec" class="month"></td>
+                    </tr>
+                </table>
+                
+            </div>
+        </div>
+
+        <div  id="mask"></div>
+    </body>
+   
+
+
+

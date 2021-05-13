@@ -1,0 +1,79 @@
+.main { 
+    width: 100%; 
+    position: relative;
+    margin-left: -5px;
+    margin-top: -5px;
+    height: 100%;
+}
+
+body{
+    background: url("background.jpg");
+}
+#month{
+    width: 100%;
+    height: 75%;
+}
+.month {
+    vertical-align: top;
+}
+.text{
+    font: 14px Arial,"Helvetica Neue",sans-serif;
+}
+/* Таблица календарика */ 
+.calendar { 
+  border: 1px solid #909090; 
+  border-collapse: collapse; 
+  font-family: Arial; 
+  font-size: 14px; 
+} 
+/* Заголовок */ 
+.calendar th { 
+  text-align: center; 
+  width: 28px; 
+  height: 28px; 
+  color: #000000; 
+  border: 1px solid #909090; 
+} 
+/* Заголовок праздника */ 
+.calendar th.holiday { 
+  color: #FF0000; 
+} 
+.calendar .th_holiday { 
+  color: #FF0000; 
+} 
+/* Ячейка дня */ 
+.calendar td { 
+  text-align: right; 
+  width: 20px; 
+  height: 28px; 
+  padding-right: 6px; 
+  border: 1px solid #909090; 
+  text-align: right; 
+  cursor: pointer; 
+} 
+
+/* Выбранный день */ 
+.calendar td.selected { 
+  background: #6DAFBF; 
+  color: #FFFFFF; 
+  box-shadow: 1px 1px rgba(255, 255, 255, 0.5) inset; 
+} 
+/* Праздничный день */ 
+.calendar td.holiday { 
+  color: #FF0000; 
+} 
+/* Кнопки навигации */ 
+.calendar td.navigation { 
+  text-align: center; 
+  border: 0px none !important; 
+  font-size: 18px; 
+  white-space: nowrap; 
+} 
+#mask{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    z-index: 5;
+    top: 30px;
+    left: 0px;
+}

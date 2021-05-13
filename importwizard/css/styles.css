@@ -1,0 +1,161 @@
+.text
+{
+ font-family: Tahoma;
+ font-size: 11px;
+}
+.hText
+{
+ font-family: Tahoma;
+ font-size: 13px;
+ font-weight:bold;
+ text-align:left;
+
+}
+
+a.btlink {font-family:Tahoma;font-size:11px;text-decoration: none; color:black;}
+a.btlink:hover {font-family:Tahoma;font-size:11px;text-decoration:underline;color:#074986;}
+
+
+a.bigBtLink {font-family:Tahoma;font-size:11px;text-decoration: none; color:#074986;font-weight:bold;}
+a.bigBtLink:hover {font-family:Tahoma;font-size:11px;text-decoration:underline;color:#b7cee4;font-weight:bold;}
+
+table.someTable
+{
+	border:1px solid #b7cee4;
+	width: 100%;
+	empty-cells:show;
+}
+
+table.someTable th
+{
+ font-family: Tahoma;
+ font-size: 14px;
+ font-weight:bold;
+ text-align:left;
+ color:#074986;
+ background-color: #cbdcec;
+ padding-left: 10px;
+}
+table.someTable td 
+{
+ font-family: Tahoma;
+ font-size: 11px;
+ padding:2px;
+ padding-left:15px;
+ padding-right:10px;
+ 
+}
+table.settingsTable
+{
+	border:1px solid #b7cee4;
+	width: 100%;
+	empty-cells:show;
+	border-collapse:collapse;
+}
+
+table.settingsTable th
+{
+ font-family: Tahoma;
+ font-size: 14px;
+ font-weight:bold;
+ text-align:left;
+ color:#074986;
+ background-color: #cbdcec;
+ padding-left: 10px;
+}
+table.settingsTable td 
+{
+ font-family: Tahoma;
+ font-size: 11px;
+ padding:2px;
+ padding-left:15px;
+ padding-right:10px;
+ border: 1px solid #b7cee4;
+ 
+}
+
+table.reportTable
+{
+	border:1px solid #b7cee4;
+	width: 100%;
+	empty-cells:show;
+	border-collapse:collapse;
+	
+}
+table.reportTable th
+{
+ font-family: Tahoma;
+ font-size: 12px;
+ font-weight:bold;
+ text-align:center;
+ color:#074986;
+ background-color: #cbdcec;
+ padding-left: 10px;
+ border:1px solid #b7cee4;
+ padding-right:10px;
+
+}
+table.reportTable td 
+{
+ font-family: Tahoma;
+ font-size: 11px;
+ padding:2px;
+ padding-left:15px;
+ padding-right:10px;
+ border: 1px solid #b7cee4;
+  white-space: nowrap;
+ 
+}
+
+table.errorTable
+{
+	border:1px solid red;
+	width: 100%;
+}
+
+table.errorTable th
+{
+ font-family: Tahoma;
+ font-size: 14px;
+ font-weight:bold;
+ text-align:left;
+ color:white;
+ background-color: red;
+ padding-left: 10px;
+}
+table.errorTable td 
+{
+ font-family: Tahoma;
+ font-size: 11px;
+ padding:2px;
+ padding-left:15px;
+ padding-right:10px;
+ 
+}
+
+.input
+{
+ font-family: Tahoma;
+ font-size: 11px;
+ padding-left: 3px;
+ font-weight:bold;
+ border:1px solid #b7cee4;
+}
+div.formsContainer
+{
+	display:none;
+	width:100%;
+	height:100%;
+}
+table.forms
+{
+	width:100%;
+	height:100%;
+	border:none;
+}
+table.forms td
+{
+	font-family: Tahoma;
+    font-size: 11px;
+	border:none;
+}

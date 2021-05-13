@@ -1,0 +1,59 @@
+table.formTable
+{
+	width:100%;
+	border-collapse: collapse;
+	border:1px solid black;
+	empty-cells:show;
+	background-color:white;	
+}
+table.formTable th
+{
+	background-color: gray;
+	font-family: Tahoma;
+	font-size: 13px;
+	font-weight:bold;
+	padding:3px;
+	
+	color:white;
+	
+}
+table.formTable td
+{
+	border:1px solid silver;
+	padding:3px 3px 3px 6px;
+	font-family: Tahoma;
+	font-size: 12px;
+	white-space:nowrap;
+}
+
+.textField
+{
+		border:1px solid silver;
+		font-family: Tahoma;
+		font-size: 12px;
+		font-weight:bold;
+		padding:1px 5px 1px 5px;
+		background-color:#ededed;
+			
+}
+.sbutton
+{
+	border:1px solid silver;
+		font-family: Tahoma;
+		font-size: 12px;
+		font-weight:bold;
+		background-color:#ededed;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.select 
+{
+		border:1px solid silver;
+		font-family: Tahoma;
+		font-size: 12px;
+		font-weight:bold;
+		width:200px;
+		
+		background-color:#ededed;
+}
+

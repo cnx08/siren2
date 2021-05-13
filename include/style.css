@@ -1,0 +1,374 @@
+.tablehead{
+background-color:gray;
+font-size:11px;
+font-family:Verdana;
+font-weight:bold;
+color:white;
+}
+.dtab{
+border-top:1px solid silver;
+BORDER-LEFT:1px solid  silver;
+BORDER-RIGHT:1px solid  silver;
+BORDER-BOTTOM:1px solid  silver;
+BACKGROUND:#F5F5F5;
+
+height: auto;
+}
+.dtab2{
+border-top:1px solid silver;
+BORDER-LEFT:1px solid  silver;
+BORDER-RIGHT:1px solid  silver;
+BORDER-BOTTOM:1px solid  silver;
+BACKGROUND:#F5F5F5;
+
+height: auto;
+}
+.dtabturn{
+border-top:1px solid silver;
+BORDER-LEFT:1px solid  silver;
+BORDER-RIGHT:1px solid  silver;
+BORDER-BOTTOM:1px solid  silver;
+BACKGROUND:#F5F5F5;
+line-height: 24px;
+
+height: auto;
+}
+.mwtab{
+BORDER-TOP:1px solid black;
+BORDER-LEFT:1px solid black;
+BORDER-BOTTOM:1px solid black;
+BORDER-RIGHT:1px solid black;
+BACKGROUND:#f5f5f5;
+}
+
+.inputfilter{
+border:0px;
+border-color:black;
+}
+.listcont{
+position:absolute;
+margin:2px;
+BORDER-TOP:1px solid silver;
+BORDER-BOTTOM:1px solid silver;
+BORDER-LEFT:1px solid silver;
+BORDER-RIGHT:1px solid silver;
+
+float:left;
+}
+.listhead{
+background-color:gray;
+font-size:11px;
+font-family:Verdana;
+font-weight:bold;
+color:white;
+height:5%;
+width:100%;
+text-align:center;
+}
+
+div.listconteiner{
+position:relative;
+top:0%;left:0%;
+width:100%;height:100%;
+overflow:auto;
+
+}
+
+.paneltab{
+margin:4px;
+BORDER-BOTTOM:1px solid midnightblue;
+}
+.delbut{
+background-color:gray;
+border:1px solid black;
+color:white;
+height:15px;
+position:relative;
+left:0px;
+
+}
+.listItem{
+position:relative;
+top:0px;
+left:0px;
+BORDER-TOP:1px solid gray;
+BORDER-LEFT:1px solid gray;
+BORDER-RIGHT:1px solid gray;
+BORDER-BOTTOM:1px solid gray;
+margin-top:2px;
+padding:2px;
+font-family:verdana;
+color:black;
+font-size:10px;
+font-weight:bold;
+
+}
+.menulistItem{
+position:relative;
+top:0px;
+left:0px;
+border-top:1px solid midnightblue;
+BORDER-LEFT:1px solid midnightblue;
+BORDER-RIGHT:1px solid midnightblue;
+BORDER-BOTTOM:1px solid midnightblue;
+margin-top:2px;
+padding:2px;
+font-family:verdana;
+color:black;
+font-size:10px;
+font-weight:bold;
+cursor:pointer;
+}
+.addbut{
+background-color:gray;
+border:1px solid black;
+color:white;
+height:18px;
+width:18px;
+position:relative;
+left:0px;
+}
+.lconteiner{
+position:relative;
+top:0px;
+left:20px;
+display:none;
+
+z-index:5;
+}
+div.timebasepanel{
+position: relative;
+width:100%;
+border:0px solid midnightblue;
+margin:1px;
+overflow:auto;
+height:30px;
+padding:1px;
+
+}
+div.timebaseitem{
+width:4px;
+height:20px;
+background-color:white;
+border:1px solid midnightblue;
+position:relative;
+margin:1px;
+float:left;
+cursor:pointer;
+}
+div.timebaseitemajax{
+width:2px;
+height:20px;
+background-color:white;
+border:1px solid midnightblue;
+position:relative;
+margin:1px;
+float:left;
+cursor:pointer;
+}
+img.icons{
+border:0;
+margin:3px;
+cursor:pointer;
+}
+.timebasesubpanel{
+border:1px solid midnightblue;
+background-color:white;
+float:left;
+margin:1px;
+padding:2px;
+width:33px;	/*23.10.2013*/
+}
+.timebasesubpanelajax{
+border:1px solid midnightblue;
+background-color:white;
+float:left;
+margin:1px;
+padding:2px;
+width:25px;	/*23.10.2013*/
+}
+.timeline{
+border:0px solid midnightblue;
+background-color:white;
+float:left;
+margin:1px;
+width:39px;
+font-family:verdana;
+font-size:7pt;
+color:black;
+text-align: center;
+}
+.timelineajax{
+border:0px solid midnightblue;
+background-color:white;
+float:left;
+margin:1px;
+width:31px;
+font-family:verdana;
+font-size:7pt;
+color:black;
+text-align: center;
+}
+.input{
+border:1px solid silver;
+font-size:11px;
+font-family:Verdana;
+background: url('/images/bg28.gif') top left no-repeat white; padding: 1px 4px;
+}
+.editinput{
+border:0px;
+font-family:Verdana;
+font-size:8pt;
+color:black;
+font-weight:bold;
+}
+.select{
+border:1px solid silver;
+font-size:11px;
+font-family:Verdana;
+}
+.string{
+BORDER-TOP:1px solid midnightblue;
+BORDER-LEFT:1px solid midnightblue;
+BORDER-RIGHT:1px solid midnightblue;
+BORDER-BOTTOM:1px solid midnightblue;
+}
+.infowindow{
+border:1px solid gray;
+background-color:#f5f5f5;
+display:none;
+padding:2px;
+margin:2px;
+position:absolute;
+Z-INDEX:50;
+}
+/*для нескольких селектов в одной строке*/
+.multiitem{
+margin-left:15px;
+margin-right:15px;
+font-size:10pt;
+}
+.reptext{font-family:Verdana;font-size:10px; color:black;font-weight:bold;}
+.sbutton
+{
+font-size:11px;
+font-family:Verdana;
+border:1px solid silver;
+}
+
+a.sortlink {font-family:Verdana;text-decoration: none; color:white;font-size:11px;font-weight:bold;}
+a.sortlink:hover {font-family:Verdana;text-decoration:none;color:white;font-size:11px;font-weight:bold;}
+
+.modalwnd{
+position:absolute;
+border:1px solid gray;
+background:#f5f5f5;
+Z-INDEX:50;
+}
+.window{
+border : 1px solid Black;
+display:table;
+
+}
+.headWnd{
+        background : Gray;
+        font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+        font-size : 10px;
+        font-weight : bold;
+        color : White;
+        padding : 2px;
+/*        display:table;	*/
+        width:100%;
+}
+.client{
+        background : white;
+        height:100%;
+/*        display:table;	*/
+        width:100%;
+}
+.error{
+color:red;
+font-family:Verdana;
+font-size:10px;
+}
+.confirm{
+color:green;
+font-family:Verdana;
+font-size:10px;
+}
+table.itemTable{width:100%; font-family:Verdana; font-size:9px;margin:1px}
+table.itemTable td{padding:2px;margin:0px;border-bottom:1px solid gray;border-left:1px solid gray;background-color:silver}
+td.images{width:10%;}
+
+/******************************************************************************/
+
+
+table.reportTable
+{
+	border:1px solid black;
+	width:100%;
+	border-collapse:collapse;
+	empty-cells:show;
+}
+table.reportTable th
+{
+	background-color:#ededed;
+	font-family:Tahoma;
+	font-size:12px;
+	font-weight:bold;
+	padding:3px;
+	border:1px solid black;
+}
+table.reportTable td
+{
+	font-family:Tahoma;
+	font-size:11px;
+	text-align:left;/*center;*/
+	padding:3px;
+	border:1px solid black;
+}
+
+/*
+	для span.text - 19.08.2010 Зорков Ю.А.
+*/
+span.text{
+	text-align: left;
+	padding-left: 3px;
+}
+span.textnote{
+	text-align: left;
+	padding-left: 3px;
+        font-size: 11px;
+}
+
+table.techreportTable
+{
+	border:1px solid black;
+	border-collapse:collapse;
+	empty-cells:show;
+}
+table.techreportTable th
+{
+	background-color:#ededed;
+	font-family:Tahoma;
+	font-size:12px;
+	font-weight:bold;
+	padding:3px;
+	border:1px solid black;
+}
+table.techreportTable td
+{
+        /*width:120px;
+        text-align:center;
+        */
+	font-family:Tahoma;
+	font-size:11px;
+	
+	padding:3px;
+	border:1px solid black;
+}
+td.techtd{
+    width:230px;
+    text-align:left;
+    
+}

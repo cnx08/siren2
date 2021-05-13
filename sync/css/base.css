@@ -1,0 +1,113 @@
+table.bodyTable
+{
+	width:99%;
+	
+	border:1px;
+}
+table.bodyTable th
+{
+	font-family: Tahoma;
+	font-weight: bold;
+	white-space:nowrap;
+	font-size: 12px;
+	color:#074986;
+	padding:5px;
+	text-align:left;
+	
+}
+table.bodyTable td
+{
+	padding: 5px;
+	
+}
+table.settingTable
+{
+	border-collapse:collapse;
+	width:100%;
+	empty-cells: show;
+}
+table.settingTable th 
+{
+	font-family: Tahoma;
+	font-weight: bold;
+	white-space:nowrap;
+	font-size: 11px;
+	padding:3px;
+	text-align:center;
+	border:1px solid silver;
+	border-bottom:1px solid silver;
+	color:black;
+	background-color:#ededed;
+	
+}
+table.settingTable td
+{
+	border:1px solid silver;
+	font-family: Tahoma;
+	text-align:center;
+	font-size: 11px;
+	padding-left:5px;
+}
+input.textField
+{
+	border:1px solid #b7cee4;
+	font-family: Tahoma;
+	font-weight:bold;
+	text-align:left;
+	font-size: 11px;
+	padding-left: 5px;
+}
+select.select
+{
+	border:1px solid #b7cee4;
+	font-family: Tahoma;
+	font-weight:bold;
+	text-align:left;
+	font-size: 11px;
+	padding-left: 5px;
+}
+input.button
+{
+	border:1px solid silver;
+	font-family: Tahoma;
+	font-weight:bold;
+	text-align:center;
+	font-size: 11px;
+	
+}
+a.butlink {font-family:Tahoma;text-decoration: none; color:#9bc2e8;font-size:11px;font-weight:bold; margin-left:5px;margin-right:5px;}
+a.butlink:hover {font-family:Tahoma;text-decoration:none;color:#9bc2e8;font-size:11px;font-weight:bold;margin-left:5px;margin-right:5px;}
+
+.warningText
+{
+	font-family:Tahoma;
+	font-size: 12px;
+	color:red;
+	font-weight:bold;
+}
+.title
+{
+	font-family:Tahoma;
+	font-size: 11px;
+	font-weight:bold;
+}
+
+div.LabelBt64, div.LabelBt64Over, div.LabelBt64Out {
+    border: 1px solid #bbbaba;
+    /*color: silver;*/
+    
+    cursor: pointer;
+    float: left;
+    height: 120px;
+    margin: 2px;
+    padding-top: 10px;
+    text-align: center;
+    width: 100px;
+}
+.c_date {
+    background: white url("/images/bg28.gif") no-repeat scroll left top;
+    border: 1px solid silver;
+    font-family: Verdana;
+    font-size: 11px;
+    padding: 1px 4px;
+}

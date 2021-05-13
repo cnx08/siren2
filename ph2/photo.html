@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+   
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="style/photo.css">
+        <link rel="stylesheet" href="../gstyles/jquery-ui.css">
+        <link rel="stylesheet" href="../gstyles/jquery-ui.theme.css">
+        <link rel="stylesheet" href="../gstyles/jquery-ui.structure.css">
+        <link rel="stylesheet" type="text/css" href="../gstyles/jquery.gritter.css" />
+        
+        <script type="text/javascript" src="../gscripts/jquery/lib/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="../gscripts/jquery/lib/jquery-ui.js"></script>
+        <script type="text/javascript" src="script/photo.js"></script>
+        <script type="text/javascript" src="../gscripts/jquery.gritter.js"></script>
+    </head>
+   
+    <body>
+        <div id="effect" class="option_panel ui-widget-content ui-corner-all">
+            <h3 class="ui-widget-header ui-corner-all" align="center">Настройки</h3>
+            <form id="photo_config">
+                <div id="accordion">
+                    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons">Выбор турникетов</h3>
+                        
+                                <div  style="width:400px; ">
+                                   <div  style="width:150px; float:left; line-height: 1.4em;">
+                                       <p>Первое окно</p>
+                                       <p>Второе окно</p>
+                                   </div>
+                                   <div  style="float:left;width:200px;">
+                                       <p><select id="tur_first_win" class="select"></select></p>
+                                       <p><select id="tur_second_win" class="select"></select></p>
+                                   </div>
+                               
+                                    <div style="width:350px;float:left;">
+                                        <p><input id="ch_show_third_fours" type="checkbox"> Выводить 3-е и 4-е окно</p>
+                                    </div>  
+                               
+                                   <div  style="width:150px; float:left; line-height: 1.4em;">
+                                       <p>Третье окно</p>
+                                       <p>Четвёртое окно</p>
+                                   </div>
+                                   <div  style="float:left;width:200px;">
+                                       <p><select id="tur_third_win" class="select"></select></p>
+                                       <p><select id="tur_fours_win" class="select"></select></p>
+                                   </div>
+                               </div>
+                         
+                    <h3>Дополнительные поля:</h3>
+                        <div>
+                            <input id="ch_dept" type="checkbox"> Отдел <br>
+                            <input id="ch_pos" type="checkbox" > Должность <br>
+                            <input id="ch_time_sm" type="checkbox"> Время смены <br>
+                            <input id="ch_time_din" type="checkbox"> Время обеда <br><br>
+                        </div>        
+                    <h3>Размеры и стили шрифта</h3>
+                    <div>
+                        <div id="filds" style="width:110px; float:left; line-height: 1.4em;">
+                            <p>Время</p>
+                            <p>Событие</p>
+                            <p>ФИО</p>
+                            <p>Отдел</p>
+                            <p>Должность</p>
+                            <p>Смена</p>
+                            <p>Обед</p>
+                        </div>
+                        <div id="selects" style="float:left;width:400px;">
+                            <div style="float:left;  padding-right: 5px;">
+                                <p>
+                                    <select id="time_font" class="select"></select>
+                                </p>
+                                <p>
+                                    <select id="event_font" class="select"></select></p>
+                                <p>
+                                    <select id="fio_font" class="select"></select></p>
+                                <p>
+                                    <select id="dept_font" class="select"></select></p>
+                                <p>
+                                    <select id="pos_font" class="select"></select></p>
+                                <p>
+                                    <select id="smena_font" class="select"></select></p>
+                                <p>
+                                    <select id="din_font" class="select"></select></p>
+                            </div>
+                            <div style="float:left;width:230px;">
+                                <p>
+                                    <select id="time_font_size" class="select"></select>
+                                    <select id="time_font_color" class="select"></select>
+                                </p>
+                                <p>
+                                    <select id="event_font_size" class="select"></select>
+                                    <select id="event_font_color" class="select"></select>
+                                </p>
+                                <p>
+                                    <select id="fio_font_size" class="select"></select>
+                                    <select id="fio_font_color" class="select"></select>
+                                </p>
+                                <p>
+                                    <select id="dept_font_size" class="select"></select>
+                                    <select id="dept_font_color" class="select"></select>
+                                </p>
+                                <p>
+                                    <select id="pos_font_size" class="select"></select>
+                                    <select id="pos_font_color" class="select"></select>
+                                </p>
+                                <p>
+                                    <select id="smena_font_size" class="select"></select>
+                                    <select id="smena_font_color" class="select"></select>
+                                </p>
+                                <p>
+                                    <select id="din_font_size" class="select"></select>
+                                    <select id="din_font_color" class="select"></select>
+                                </p>
+                             </div>
+                        </div>
+                    </div>
+                    <h3>Дополнительные опции</h3>
+                        <div>
+                            <input id="ch_slide_strick" type="checkbox"> Показывать слайд-полосу фотографий <br>
+                            <!--input id="ch_photo_increase" type="checkbox"> Разрешить увеличение маленьких фотографий <br-->
+                            <input id="ch_open_fullscreen" type="checkbox"> Показывать в полноэкранном режиме <br><br>
+                     
+                            <!--input id="ch_video_show" type="checkbox"> Показывать окно видеопотока <br-->
+                        </div> 
+                    
+                </div>      
+            </form>
+        </div>
+        <span id="area"></span>
+        <span id="but_show_first" class="button_f"><img src="img/arr_r.png" alt="Настройки"></span>
+        <span id="but_show" class="button"><img src="img/arr_r.png" alt="Настройки"></span>
+        <span id="but_save" class="button_r"><img src="img/arr.png" alt="Сохранить настройки"></span>
+        <div class="main" id="main"> 
+            <div id="left_window" class="left_window">
+                <div id="left_photo" class="left_photo">
+                     <img id="left_ph"  src="img/photo.jpg" alt="фотография сотрудника">
+                </div>
+                <div  id="left_info" class="left_info">
+                   <p>Время: <span id="time_str1" class="res_text"></span></p>
+                   <p>Событие: <span id="code_descr1" class="res_text"></span></p>
+                   <p>ФИО: <span id="FIO1" class="res_text"></span></p>
+                   <p><span class="dep">Отдел: <span id="dept1" class="res_text"></span></span></p>
+                   <p><span class="pos">Должность: <span id="position1" class="res_text"></span></span></p>
+                   <p><span class="sm_t">Смена: <span id="sm_time1" class="res_text"></span></span><span class="sm_d"> Обед: <span id="sm_dinner1" class="res_text"></span></span></p>
+                </div>
+                <div id="left_photo_stripe" class="left_photo_stripe"></div>
+                <!--div id="left_video" class="left_video">
+                  <!--   <img height="300" width="400" src="../foto/video.jpg">>
+                </div-->
+           </div>
+            <div id="right_window" class="right_window">
+                <div id="right_photo" class="right_photo">
+                      <p><img id="right_ph" src="img/photo.jpg" alt="фотография сотрудника"></p>
+                </div>
+               <div id="right_info" class="right_info">
+                   <p>Время: <span id="time_str2" class="res_text"></span></p>
+                   <p>Событие: <span id="code_descr2" class="code_descr2"></span></p>                   
+                   <p>ФИО: <span id="FIO2" class="res_text"></span></p>
+                   <p><span class="dep">Отдел: <span id="dept2" class="res_text"></span></span></p>
+                   <p><span class="pos">Должность: <span id="position2" class="res_text"></span></span></p>
+                   <p><span class="sm_t">Cмена: <span id="sm_time2" class="res_text"></span></span><span class="sm_d"> Обед: <span id="sm_dinner2" class="res_text"></span></span></p>
+               </div>
+               <div id="right_photo_stripe" class="right_photo_stripe"></div>
+               <!--div id="right_video" class="right_video">
+                   <!--  <img height="300" width="400" src="../foto/video.jpg">>
+               </div-->
+           </div>
+        </div>    
+
+        <input id="first_upd_time" type="hidden" value="0">
+        <input id="second_upd_time" type="hidden" value="0">
+    </body>
+   
+</html>
+
+

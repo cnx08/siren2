@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "	//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+<title>СКУД-Руководство Пользователя</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../include/menu.css">
+  <link rel="stylesheet" type="text/css" href="../include/style.css">
+  <script type="text/javascript">
+  function ChangeColor(color,obj)
+  {
+   if(!obj)return;
+   obj.style.backgroundColor=color;
+  }
+
+  function ShowCloseDropDownList(id_element,button)
+  {
+   var list=document.getElementById(id_element);
+   if(!list)return;
+
+  if(list.style.display=="none")
+  {
+    list.style.display="block";
+    button.value="-";
+  }
+  else
+  {
+    list.style.display="none";
+    button.value="+";
+  }
+ }
+ function goToUrl(url)
+ {
+
+  //window.frames['text'].document.location.href = url;
+ }
+  </script>
+</head>
+
+<body>
+<table border="0" width="100%" height="96%" cellpadding="0" align="center">
+<tr>
+   <td width="20%" valign="top">
+      <div class="listItem" style="cursor"><input class="delbut" type="button" value="+" onClick='ShowCloseDropDownList("pers_dropdown",this)' style="width:15px;">
+              Персонал</div>
+           <div id="pers_dropdown" class="listItem" style="border:none;display:none;margin-left:17px;">
+                <div class="menulistItem" onmouseover='ChangeColor("silver",this)' onmouseout='ChangeColor("white",this)'><a href="personal/#depart" target="text" class="menulink">Отделы</a></div>
+                <div class="menulistItem" onmouseover='ChangeColor("silver",this)' onmouseout='ChangeColor("white",this)'><a href="personal/#personal" target="text" class="menulink">Сотрудники</a></div>
+                <div class="menulistItem" onmouseover='ChangeColor("silver",this)' onmouseout='ChangeColor("white",this)'><a href="personal/#groupop" target="text" class="menulink">Групповые операции</a></div>
+                <div class="menulistItem" onmouseover='ChangeColor("silver",this)' onmouseout='ChangeColor("white",this)'><a href="personal/#pass" target="text" class="menulink">Пропуска</a></div>
+                <div class="menulistItem" onmouseover='ChangeColor("silver",this)' onmouseout='ChangeColor("white",this)'><a href="personal/#persinfo" target="text" class="menulink">Карточка сотрудника</a></div>
+           </div>
+       <div class="listItem" style="cursor"><input class="delbut" type="button" value="+" onClick='ShowCloseDropDownList("direct_dropdown",this)' style="width:15px;">
+              Справочники</div>
+           <div id="direct_dropdown" class="listItem" style="border:none;display:none;margin-left:17px;">
+                <div class="menulistItem" onmouseover='ChangeColor("silver",this)' onmouseout='ChangeColor("white",this)'><a href="directories/#terr" target="text" class="menulink">Территории</a></div>
+                <div class="menulistItem" onmouseover='ChangeColor("silver",this)' onmouseout='ChangeColor("white",this)'><a href="directories/#zone" target="text" class="menulink">Рабочие зоны</a></div>
+                <div class="menulistItem" onmouseover='ChangeColor("silver",this)' onmouseout='ChangeColor("white",this)'><a href="directories/#turniket" target="text" class="menulink">Турникеты</a></div>
+                <div class="menulistItem" onmouseover='ChangeColor("silver",this)' onmouseout='ChangeColor("white",this)'><a href="directories/#mode" target="text" class="menulink">Режимы</a></div>
+				<div class="menulistItem" onmouseover='ChangeColor("silver",this)' onmouseout='ChangeColor("white",this)'><a href="directories/#access" target="text" class="menulink">Допуска</a></div>
+				<div class="menulistItem" onmouseover='ChangeColor("silver",this)' onmouseout='ChangeColor("white",this)'><a href="directories/#changes" target="text" class="menulink">Смены</a></div>
+				<div class="menulistItem" onmouseover='ChangeColor("silver",this)' onmouseout='ChangeColor("white",this)'><a href="directories/#shedules" target="text" class="menulink">Графики</a></div>
+           </div>
+		  <div class="menulistItem" onmouseover='ChangeColor("silver",this)' onmouseout='ChangeColor("white",this)'><a href="documents/" target="text" class="menulink">Документы</a></div>  
+		  
+          <div class="listItem" style="cursor"><input class="delbut" type="button" value="+" onClick='ShowCloseDropDownList("gournal_dropdown",this)' style="width:15px;">
+              Журналы</div>
+           <div id="gournal_dropdown" class="listItem" style="border:none;display:none;margin-left:17px;">
+                <div class="menulistItem" onmouseover='ChangeColor("silver",this)' onmouseout='ChangeColor("white",this)'><a href="visitors/#visitors" target="text" class="menulink">Посетителей</a></div>
+                <div class="menulistItem" onmouseover='ChangeColor("silver",this)' onmouseout='ChangeColor("white",this)'><a href="visitors/#visitings" target="text" class="menulink">Посещений</a></div>
+           </div>
+           <div class="listItem" style="cursor"><input class="delbut" type="button" value="+" onClick='ShowCloseDropDownList("tabel",this)' style="width:15px;">
+              Табельный учёт</div>
+           <div id="tabel" class="listItem" style="border:none;display:none;margin-left:17px;">
+                <div class="menulistItem" onmouseover='ChangeColor("silver",this)' onmouseout='ChangeColor("white",this)'><a href="tabel/" target="text" class="menulink">Редактирование табеля</a></div>
+           </div>
+   </td>
+
+
+</tr>
+</table>
+</body>
+
+</html>

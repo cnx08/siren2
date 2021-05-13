@@ -1,0 +1,59 @@
+#<IfModule mod_autoindex>
+	#Запрещаем просмотр содержимого папок
+	Options -Indexes
+	#DirectoryIndex index.php
+#</IfModule>
+
+
+<IfModule mod_rewrite.c>
+	
+	Options +FollowSymlinks
+	#разрешаем менять URL
+	RewriteEngine On
+	
+	#Если это папка или файл, открывает его
+	RewriteCond %{SCRIPT_FILENAME} !-f
+        RewriteCond %{SCRIPT_FILENAME} !-d
+	RewriteCond %{SCRIPT_FILENAME} !-s
+	#В противном случае перенаправляем на index.php
+	#RewriteRule .* index.php
+	RewriteRule ^(.*?)/?$ index.php?url=$1 [QSA,L]
+
+	RewriteCond %{REQUEST_FILENAME} -d
+        RewriteRule ^(.+?)/$ index.php?url=$1 [QSA,L]
+	#RewriteRule ^(([^/]+/)*[^.]+)$ /$1.php [L]
+
+</IfModule>
+#<IfModule !rewrite_module>
+#OR<IfModule !mod_rewrite.c>
+<IfModule !mod_rewrite.c>
+    ErrorDocument 404 index.php
+</IfModule>
+
+#Защищаем .htaccess файл
+<files ".htaccess">
+order deny,allow
+deny from all
+</files>
+
+<Files ~ "\.(bat)$">
+  Order Deny,Allow
+  Deny from all
+</Files>
+
+
+#Защищаем login.log файл
+<files "login.log">
+order deny,allow
+deny from all
+</files>
+
+#Создаем черный список IP адресов
+order allow,deny
+allow from all
+#deny from 192.168.0.8
+
+
+
+
+#deny from 127.0.0.1

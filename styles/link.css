@@ -1,0 +1,13 @@
+/*
+	стили для ссылок - перенес из include/menu.php
+*/
+
+a.slink {font-family:Verdana;text-decoration:none; color:red;font-size:8pt;}
+a.slink:hover {font-family:Verdana;text-decoration:underline;color:midnightblue;font-size:8pt;}
+
+a.actlink {font-family:Verdana;font-size:8pt;text-decoration: none; color:black;font-weight:bold;}
+a.actlink:hover {font-family:Verdana;font-size:8pt;text-decoration:underline;color:silver;}
+
+
+a.menulink {font-family:Verdana;text-decoration: none; color:black;font-size:10px;}
+a.menulink:hover {font-family:Verdana;text-decoration:none;color:black;font-size:10px;}

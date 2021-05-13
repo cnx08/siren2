@@ -1,0 +1,265 @@
+table.frame
+{
+
+}
+table.frame td
+{
+	font-family:Tahoma;
+/*    text-align:baseline;*/
+	vertical-align:baseline;
+	font-size:11px;
+	padding-left:5px;
+	padding-bottom:3px;
+	padding-top:3px;
+	padding-right:10px;
+
+}
+table.listTable
+{
+	width:100%;
+}
+
+table.listTable th
+{
+ 	font-family:Tahoma;
+/*    text-align:baseline;*/
+	vertical-align:baseline;
+	font-size:11px;
+	font-weight:bold;
+    background-color:#ededed;
+    padding:3px;
+    border-bottom:2px solid silver;
+    border-right:2px solid silver;
+    border-top:2px solid silver;
+    cursor:default;
+}
+table.listTable td
+{
+	font-family:Tahoma;
+    text-align:center;
+	font-size:11px;
+	padding-left:5px;
+	padding-bottom:3px;
+	padding-top:3px;
+	padding-right:10px;
+    border-right:1px solid silver;
+    border-bottom:1px solid silver;
+    cursor:default;
+}
+table.Table
+{
+   border:1px solid silver;
+}
+
+table.Table th
+{
+ 	font-family:Tahoma;
+    text-align:left;
+	font-size:11px;
+	font-weight:bold;
+    background-color:#ededed;
+    padding:3px;
+    cursor:default;
+}
+table.Table td
+{
+	font-family:Tahoma;
+    text-align:center;
+	font-size:11px;
+}
+input.field
+{
+	border:1px solid gray;
+	font-family:Tahoma;
+	font-size:11px;
+	background-Color:#ededed;
+	font-weight:bold;
+	padding-left:2px;
+
+}
+select.ddlist
+{   border:1px solid gray;
+	font-family:Tahoma;
+	font-size:11px;
+	font-weight:normal;
+
+}
+.tbutton
+{
+	border:1px solid gray;
+	font-family:Tahoma;
+	font-size:11px;
+	font-weight:bold;
+	background-image: url('images/newuser.gif');
+}
+
+div.list_conteiner
+{
+	position:relative;
+	border:none;
+	overflow:auto;
+}
+.error_text
+{
+    font-family:Tahoma;
+    text-align:center;
+	font-size:11px;
+	color:red;
+	font-weight:bold;
+}
+div.statusBarItems
+{
+border:1px solid silver;
+padding:2px;
+margin-left:3px;
+margin-top:2px;
+/*width:50px;*/
+float:left;
+}
+
+/*a.actionlink {font-family:Tahoma;text-decoration: underline; color:black;font-size:11px;pointer:cursor;}
+a.actionlink:hover {font-family:Tahoma;text-decoration:none;color:black;font-size:11px;pointer:cursor;}
+*/
+/*a.actionlink {font-family:Tahoma;text-decoration: underline; color:black;font-size:11px;}*/
+/* a.actionlink:hover {font-family:Tahoma;text-decoration:none;color:black;font-size:11px;}*/ 
+table.repTable
+{
+  border:1px solid silver;
+  border-collapse:collapse;
+}
+table.repTable th
+{
+	font-family:Verdana;
+    text-align:center;
+	font-size:11px;
+	font-weight:bold;
+	padding:2px;
+	background-color:#ededed;
+	border:1px solid silver;
+}
+table.repTable td
+{
+	font-family:Verdana;
+    text-align:left;
+	font-size:10px;
+	padding:2px;
+	border:1px solid silver;
+	text-align:center;
+}
+.schema_div_img{
+    width: 100%;
+    height: 128px;
+    
+ 
+}
+.schema_img{
+    width: 100%;
+    height: 100%;
+ 
+}
+.schema_div_main{
+    
+    font: bold italic 16px 'Courier';
+    
+    overflow: hidden;
+    width: 654px;
+    height: 100%;
+    margin: 20px;
+}
+.schema_div_left{
+    
+    /*width: 16%;*/
+    width: 254px;
+    height: 100%;
+    float: left;
+}
+.schema_div_right{
+    
+    width: 400px;
+   height: 100%;
+    float: left;
+}
+.div_content{
+    height: 88px;
+    padding: 20px;
+}
+.div_content_turn{
+    height: 88px;
+    padding: 20px;
+}
+.schema_span_srt{
+    margin: 31px;
+}
+
+.schema_span_dm{
+    margin: 41px;
+}
+.red_alert{
+    color: red;
+}
+.TBD{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font: 12px Verdana;
+    border: 1px solid black;
+    background-color: white;
+}
+.rs{
+    padding-left: 11px;
+    padding-right: 10px;
+    border-right-width: 0px;
+}
+.line{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right-width: 0px;
+}
+.reader{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.io{
+    padding-left: 7px;
+    padding-right: 8px;
+    border-right-width: 0px;
+}
+.test{
+    padding-left: 8px;
+    padding-right: 8px;
+    border-right-width: 0px;
+}
+.fire{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.reg{
+    padding-left: 6px;
+    padding-right: 6px;
+    border-right-width: 0px;
+}
+.dop{
+    padding-left: 6px;
+    padding-right: 6px;
+    border-right-width: 0px;
+}
+.graph{
+    padding-left: 4px;
+    padding-right: 4px;
+    
+}
+.zas{
+    padding-left: 6px;
+    padding-right: 6px;
+     border-right-width: 0px;
+}
+
+.t_log{
+    padding-left: 19px;
+    padding-right: 19px;
+     border-right-width: 0px;
+}
+.left_ev{
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}

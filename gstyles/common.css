@@ -1,0 +1,180 @@
+body 
+{
+	margin:0px;
+}
+
+
+a.linkBt {font-family:Tahoma;text-decoration: none; color:#074986;font-weight:bold; font-size:12px;}
+a.linkBt:hover {font-family:Tahoma;text-decoration:none;color:#9bc2e8;font-weight:bold;font-size:12px;}
+
+a.sortLink  { font-family:Tahoma;text-decoration: none; color:white;font-weight:bold; font-size:12px; }
+a.sortLink:hover {font-family:Tahoma;text-decoration:underline;color:white;font-weight:bold;font-size:12px;}
+
+
+a.pagelink { font-family:Tahoma;text-decoration: none; color:white;font-weight:bold; font-size:12px; }
+a.pagelink:hover {font-family:Tahoma;text-decoration:none;color:#9bc2e8;font-weight:bold;font-size:12px;}
+
+table.listTable 
+{
+	border:1px solid white;
+	border-collapse:collapse;
+	empty-cells:show;
+	width:100%;
+}
+
+table.listTable  th
+{
+	background-color:gray;
+	font-family:Tahoma;
+	font-size:13px;
+	font-weight:bold;
+	color:white;
+	padding:3px;
+	border:1px solid white;
+}
+
+table.listTable  td
+{
+	font-family:Tahoma;
+	font-size:12px;
+	text-align:center;
+	border:1px solid white;
+	padding:3px;
+}
+
+img.imageBt
+{
+	cursor:pointer;
+	
+	margin-left:4px;
+	margin-right:2px;
+}
+div.hideContainer
+{
+	position:absolute;
+	top:50px;
+	left:100px;
+	display:none;
+}
+
+table.propTable
+{
+	width:100%;
+	height:100%;
+	background-color:white;
+	border:1px solid #074986;
+	padding:2px;
+	
+}
+table.propTable th
+{
+	font-family:tahoma;
+	font-size: 12px;
+	font-weight:bold;
+	background-color:#cbdcec;
+	color:#074986;
+	height:3%;
+}
+table.propTable td
+{
+	font-family:tahoma;
+	font-size: 12px;
+	padding:3px;
+}
+div.treeScrollContainer
+{
+	width:90%;
+	height:400px;
+	overflow:auto;
+	font-family:Tahoma;
+	font-size:12px;
+	padding-top:5px;
+        padding-left:12px;
+	
+} 
+table.treeReference
+{
+	width:100%;
+	height:80%;
+	border:1px solid gray;
+	border-collapse: collapse;
+	empty-cells:show;
+	
+} 
+table.treeReference th
+{
+	font-family:Tahoma;
+	font-size:12px;
+	font-weight:bold;
+	background-color: #9bc2e8;
+	padding: 5px;
+	background-color:gray;
+	color:white;
+
+}
+
+table.treeReference td
+{
+	font-family:Tahoma;
+	font-size:11px;
+	padding: 5px;
+	border:1px solid gray;
+}
+
+table.dialog, table.errorDialog , table.confirmDialog  
+{
+	width:100%;
+	height:100%;
+	border-collapse:collapse;
+} 
+table.dialog td , table.errorDialog  td, table.confirmDialog td
+{
+	font-family:Tahoma;
+	font-size:12px;
+	padding:5px;
+}
+
+table.dialog th, table.errorDialog th , table.confirmDialog  th 
+{
+	font-family:Tahoma;
+	font-weight:bold;
+	font-size:13px;
+	padding: 5px;
+	text-align:left;	
+}
+
+table.errorDialog  
+{
+	border:1px solid #b10101;
+	
+}
+table.errorDialog  th
+{
+	color: white;
+	background-color:red;
+	
+}
+
+table.confirmDialog  
+{
+	border:1px solid green;
+	
+}
+table.confirmDialog   th
+{
+	color: white;
+	background-color:green;
+	border:1px solid green;
+}
+.sbutton
+{
+	border:1px solid silver;
+		font-family: Tahoma;
+		font-size: 12px;
+		font-weight:bold;
+		background-color:#ededed;
+	margin-left: 5px;
+	margin-right: 5px;
+} 
+
+.highlight { background: #FA6; }

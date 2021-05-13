@@ -1,0 +1,69 @@
+table.PagesList
+{
+  border:1px solid #889294;
+  border-collapse:collapse;
+}
+table.PagesList  th
+{
+	font-family:Tahoma;
+	font-size:12px;
+	background-color:#074986;
+	color:white;
+	padding: 2px;
+	border:1px solid #889294;
+	cursor:default;
+}
+
+table.PagesList  td
+{
+	font-family:Tahoma;
+	font-size:11px;
+	text-align:center;
+	padding: 2px;
+	border:1px solid silver;
+	cursor:default;
+	empty-cells:show;
+}
+table.ListFooter
+{
+  border-top: 3px solid #074986;
+  width: 100%;
+}
+
+table.ListFooter td
+{
+	font-family:Tahoma;
+	font-size:11px;
+	text-align:left;
+	padding: 2px;
+	border:none;
+	width:33%;
+}
+table.ListTop td
+{
+	font-family:Tahoma;
+	font-size:11px;
+	text-align:left;
+	padding: 2px;
+	text-align:right;
+	border:none;
+}
+select.PagesListSelect
+{
+  font-family:Tahoma;
+  font-size:11px;
+  font-weight:bold;
+  background-color:#889294;
+  color:white;
+  width: 60px;
+  text-align:center;
+  border:1px solid silver;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+img.listButton
+{
+  cursor:pointer;
+}
+a.btlink {font-family:Tahoma;font-size:11px;text-decoration: none; color:black;font-weight:bold;}
+a.btlink:hover {font-family:Tahoma;font-size:11px;text-decoration:underline;color:#074986;font-weight:bold;}

@@ -1,0 +1,7 @@
+
+<Files ~ "\.(bat)$">
+  Order Deny,Allow
+  Deny from all
+</Files>
+
+

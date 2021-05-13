@@ -1,0 +1,75 @@
+.tabtext{
+font-family:verdana;
+font-size:10px;
+font-weight:bold;
+}
+.tabheadtext{
+font-family:verdana;
+font-size:10px;
+font-weight:bold;
+}
+.tabinput{
+border:1px solid silver;
+font-family:verdana;
+font-size:11px;
+/*background: url('/images/bg28.gif') top left no-repeat white; padding: 1px 4px;*/
+}
+.tabinputedit{
+border:1px solid silver;
+font-family:verdana;
+font-size:11px;
+width: 98%;
+/*background: url('/images/bg28.gif') top left no-repeat white; padding: 1px 4px;*/
+}
+
+.tabtable{
+border-top:1px solid silver;
+border-left:1px solid silver;
+border-right:1px solid silver;
+border-bottom:1px solid silver;
+}
+.tabheadstr{
+background-color:silver;
+}
+.cell{
+border-left:1px solid silver;
+border-bottom:1px solid silver;
+border-top:1px solid silver;
+border-right:1px solid silver;
+}
+.downborder{
+border-bottom:1px solid silver;
+}
+.topborder{
+border-top:1px solid silver;
+}
+.leftborder{
+border-left:1px solid silver;
+}
+.rightborder{
+border-right:1px solid silver;
+}
+
+.panel{
+border: 1px solid silver;
+background-color : gray;
+position:relative;
+padding:2px;
+}
+.panelbuttons{
+margin:1px;
+border:1px solid silver;
+float:right;
+cursor:pointer;
+}
+.conteiner
+{
+	position:relative;
+	top:0px;
+	left:0px;
+	border:1px solid gray;
+}
+.selectList
+{
+	border:1px solid silver;
+}

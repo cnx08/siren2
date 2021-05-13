@@ -1,0 +1,29 @@
+/*
+	стили для календаря
+*/
+
+
+
+.Calendar{
+background-color:rgb(150,194,223);
+}
+.CalButton,.SmallFont{
+Font-Family: verdana;
+Font-Size: 8pt;
+Color:black;
+Text-Decoration:None;
+}
+
+
+
+.CalButtonToday{
+Color:red;
+}
+
+
+/* класс окна календаря*/
+
+
+.calendarwindow{
+DISPLAY:none;
+}

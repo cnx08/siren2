@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+   
+    <head>
+        <title>Мониторинг событий</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="style/style.css">
+        
+        <script type="text/javascript" src="../gscripts/jquery/lib/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="script/mon.js"></script>
+    </head>
+   
+    <body>
+         <h1>Мониторинг событий</h1>
+
+    <p>Выделить события:&nbsp;
+        <input id = "code" type="text" size = "1" maxlength="1" value=""> Код события&nbsp;&nbsp;&nbsp;
+        <input id = "turn" type="text" size = "1" maxlength="5" value=""> Турникет&nbsp;&nbsp;&nbsp;
+        <input id = "unit" type="text" size = "1" maxlength="3" value=""> Юнит
+    </p>
+    <div id = "events" class = "blok"></div>
+    
+    <p>Код пропуска:&nbsp;
+        <input id = "px_code" type="text" size = "16" maxlength="16" value="">
+    </p>
+    
+    <input id="first_upd_time" type="hidden" value="0">
+    <input id="counter" type="hidden" value="0">
+    <input id="anistop" type="hidden" value="0">
+    </body>
+   
+</html>
+
+
