@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/ph/stylesheets/styles.css' />
+    <link rel="stylesheet" href="/ph/stylesheets/jquery-ui.min.css">
+    <link rel="stylesheet" href="/ph/stylesheets/jquery-ui.theme.css">
+    <link rel="stylesheet" href="/ph/stylesheets/jquery-ui.structure.css">
+    <link rel="stylesheet" href="/ph/stylesheets/jquery.gritter.css" />
+
+    <script type="text/javascript" src="/ph/javascripts/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="/ph/javascripts/socket.io.js"></script>
+    <script type="text/javascript" src="/ph/javascripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/ph/javascripts/jquery.gritter.js"></script>
+    <script type="text/javascript" src="/ph/javascripts/photo.js"></script>
+
+    <script>
+
+        var socket = io('http://'+window.location.host+':8080');
+        //var socket = io();
+        socket.on('redirect', function() {
+            window.location.replace('http://'+window.location.host+':80');
+        });
+        socket.on('params', function(data) {
+            ConfigSet(data);
+            fillParamPanel(data);
+            paramsToObj();
+        });
+        socket.on('turnlist', function(data) {
+            fillTurnData(data);
+        });
+        socket.on('event', function(data) {
+            letsResize();
+            var ee = $('#tur_third_win').val();
+            if(data.turn == ee) {
+                $('#code_descr1').html(data.code_descr);
+                $('#time_str1').html(data.time_str);
+                $('#FIO1').html(data.FIO);
+                $('#dept1').html(data.dept);
+                $('#position1').html(data.position);
+                $('#sm_time1').html(data.sm_time);
+                $('#sm_dinner1').html(data.sm_dinner);
+
+                data.photo_name == "" ? $('#left_ph').attr('src', 'images/no.jpg') : $('#left_ph').attr('src', '../foto/' + data.photo_name);
+                data.red_code == 1 ? $('#left_photo').css('border', '3px solid red') : $('#left_photo').css('border', '1px solid green');
+
+                if (data.sm_frame == '1') {
+                    if (left_win_gritter.show == 1) {
+                        sm_din = data.sm_dinner == '' ? '' : ' (' + data.sm_dinner + ')';
+                        $.gritter.add({
+                            title: data.FIO,
+                            text: data.time_str + " " + data.code_descr + '<br>' + data.dept + '<br>' + data.position + '<br>' + data.sm_time + sm_din,
+                            image: data.photo_name === "" ? 'images/no.jpg' : '../foto/' + data.photo_name,
+                            time: 60000,
+                            class_name: 'gritter-light'
+                        });
+                        $('#gritter-notice-wrapper').css("right", left_win_gritter.right);
+                        $('#gritter-notice-wrapper').css("top", left_win_gritter.top);
+                    }
+                    if (data.ch_slide_strick != 'false') {
+                        if (duble_win) {
+                            var img = data.photo_name === "" ? 'images/no.jpg' : '../foto/' + data.photo_name;
+                            var tmp = '<div class="stripe_left"><img class="photo_stripe_obj" src="' + img + '" title="' + data.code_descr + ': ' + data.FIO + '"></div>';
+
+                            if ($(".stripe_left").length >= photo_in_stripe) $(".stripe_left").last().remove();
+                            $("#left_photo_stripe").prepend(tmp).fadeIn("slow");
+                        }
+                    }
+                }
+            }
+            var ee2 = $('#tur_fours_win').val()
+            if(data.turn == ee2) {
+
+                $('#code_descr2').html(data.code_descr);
+                $('#time_str2').html(data.time_str);
+                $('#FIO2').html(data.FIO);
+                $('#dept2').html(data.dept);
+                $('#position2').html(data.position);
+                $('#sm_time2').html(data.sm_time);
+                $('#sm_dinner2').html(data.sm_dinner);
+
+                data.photo_name == "" ? $('#right_ph').attr('src', 'images/no.jpg') : $('#right_ph').attr('src', '../foto/' + data.photo_name);
+                data.red_code == 1 ? $('#right_photo').css('border', '3px solid red') : $('#right_photo').css('border', '1px solid green');
+
+                if (data.sm_frame == '1') {
+                    if (right_win_gritter.show == 1) {
+                        sm_din = data.sm_dinner == '' ? '' : ' (' + data.sm_dinner + ')';
+                        $.gritter.add({
+                            title: data.FIO,
+                            text: data.time_str + " " + data.code_descr + '<br>' + data.dept + '<br>' + data.position + '<br>' + data.sm_time + sm_din,
+                            image: data.photo_name === "" ? 'images/no.jpg' : '../foto/' + data.photo_name,
+                            time: 60000,
+                            class_name: 'gritter-light'
+                        });
+                        $('#gritter-notice-wrapper').css("right", right_win_gritter.right);
+                        $('#gritter-notice-wrapper').css("top", right_win_gritter.top);
+                    }
+                    if (data.ch_slide_strick != 'false') {
+                        if (duble_win) {
+                            var img = data.photo_name === "" ? 'images/no.jpg' : '../foto/' + data.photo_name;
+                            var tmp = '<div class="stripe_right"><img class="photo_stripe_obj" src="' + img + '" title="' + data.code_descr + ': ' + data.FIO + '"></div>';
+
+                            if ($(".stripe_right").length >= photo_in_stripe) $(".stripe_right").last().remove();
+                            $("#right_photo_stripe").prepend(tmp).fadeIn("slow");
+                        }
+                    }
+                }
+            }
+        });
+
+    </script>
+</head>
+<body>
+<div id="effect" class="option_panel ui-widget-content ui-corner-all">
+    <h3 class="ui-widget-header ui-corner-all" align="center">Настройки</h3>
+    <form id="photo_config">
+        <div id="accordion">
+            <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons">Выбор турникетов</h3>
+
+            <div  style="width:400px; ">
+                <div  style="width:150px; float:left; line-height: 1.4em;">
+                    <p>Первое окно</p>
+                    <p>Второе окно</p>
+                </div>
+                <div  style="float:left;width:200px;">
+                    <p><select id="tur_first_win" class="select"></select></p>
+                    <p><select id="tur_second_win" class="select"></select></p>
+                </div>
+
+                <div style="width:350px;float:left;">
+                    <p><input id="ch_show_third_fours" type="checkbox"> Выводить 3-е и 4-е окно</p>
+                </div>
+
+                <div  style="width:150px; float:left; line-height: 1.4em;">
+                    <p>Третье окно</p>
+                    <p>Четвёртое окно</p>
+                </div>
+                <div  style="float:left;width:200px;">
+                    <p><select id="tur_third_win" class="select"></select></p>
+                    <p><select id="tur_fours_win" class="select"></select></p>
+                </div>
+            </div>
+
+            <h3>Дополнительные поля:</h3>
+            <div>
+                <input id="ch_dept" type="checkbox"> Отдел <br>
+                <input id="ch_pos" type="checkbox" > Должность <br>
+                <input id="ch_time_sm" type="checkbox"> Время смены <br>
+                <input id="ch_time_din" type="checkbox"> Время обеда <br><br>
+            </div>
+            <h3>Размеры и стили шрифта</h3>
+            <div>
+                <div id="filds" style="width:110px; float:left; line-height: 1.4em;">
+                    <p>Время</p>
+                    <p>Событие</p>
+                    <p>ФИО</p>
+                    <p>Отдел</p>
+                    <p>Должность</p>
+                    <p>Смена</p>
+                    <p>Обед</p>
+                </div>
+                <div id="selects" style="float:left;width:410px;">
+                    <div style="float:left;  padding-right: 5px;">
+                        <p>
+                            <select id="time_font" class="select"></select>
+                        </p>
+                        <p>
+                            <select id="event_font" class="select"></select></p>
+                        <p>
+                            <select id="fio_font" class="select"></select></p>
+                        <p>
+                            <select id="dept_font" class="select"></select></p>
+                        <p>
+                            <select id="pos_font" class="select"></select></p>
+                        <p>
+                            <select id="smena_font" class="select"></select></p>
+                        <p>
+                            <select id="din_font" class="select"></select></p>
+                    </div>
+                    <div style="float:left;width:230px;">
+                        <p>
+                            <select id="time_font_size" class="select"></select>
+                            <select id="time_font_color" class="select"></select>
+                        </p>
+                        <p>
+                            <select id="event_font_size" class="select"></select>
+                            <select id="event_font_color" class="select"></select>
+                        </p>
+                        <p>
+                            <select id="fio_font_size" class="select"></select>
+                            <select id="fio_font_color" class="select"></select>
+                        </p>
+                        <p>
+                            <select id="dept_font_size" class="select"></select>
+                            <select id="dept_font_color" class="select"></select>
+                        </p>
+                        <p>
+                            <select id="pos_font_size" class="select"></select>
+                            <select id="pos_font_color" class="select"></select>
+                        </p>
+                        <p>
+                            <select id="smena_font_size" class="select"></select>
+                            <select id="smena_font_color" class="select"></select>
+                        </p>
+                        <p>
+                            <select id="din_font_size" class="select"></select>
+                            <select id="din_font_color" class="select"></select>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <h3>Дополнительные опции</h3>
+            <div>
+                <input id="ch_slide_strick" type="checkbox"> Показывать слайд-полосу фотографий <br>
+                <!--input id="ch_photo_increase" type="checkbox"> Разрешить увеличение маленьких фотографий <br-->
+                <input id="ch_open_fullscreen" type="checkbox"> Показывать в полноэкранном режиме <br><br>
+
+                <!--input id="ch_video_show" type="checkbox"> Показывать окно видеопотока <br-->
+            </div>
+
+        </div>
+    </form>
+</div>
+<!--span id="area"></span>
+<span id="but_show" class="button"><img src="ph/images/arr_r.png" alt="Настройки"></span>
+<span id="but_hide" class="button_r"><img src="ph/images/arr.png" alt="Сохранить настройки"></span-->
+<div class="main" id="main">
+    <div id="left_window" class="left_window">
+        <div id="left_photo" class="left_photo left_photo_down">
+            <img id="left_ph"  src="images/photo.jpg" alt="фотография сотрудника">
+        </div>
+        <div  id="left_info" class="left_info left_info_up">
+            <p>Время: <span id="time_str1" class="time_str"></span></p>
+            <p>Событие: <span id="code_descr1" class="code_descr"></span></p>
+            <p>ФИО: <span id="FIO1" class="FIO"></span></p>
+            <p><span class="dep">Отдел: <span id="dept1" class="dept"></span></span></p>
+            <p><span class="pos">Должность: <span id="position1" class="posi"></span></span></p>
+            <p><span class="sm_t">Смена: <span id="sm_time1" class="sm_time"></span></span><span class="sm_d"> Обед: <span id="sm_dinner1" class="sm_dinner"></span></span></p>
+        </div>
+        <div id="left_photo_stripe" class="left_photo_stripe"></div>
+        <!--div id="left_video" class="left_video">
+          <!--   <img height="300" width="400" src="../foto/video.jpg">>
+        </div-->
+    </div>
+    <div id="right_window" class="right_window">
+        <div id="right_photo" class="right_photo right_photo_down">
+            <p><img id="right_ph" src="images/photo.jpg" alt="фотография сотрудника"></p>
+        </div>
+        <div id="right_info" class="right_info right_info_up">
+            <p>Время: <span id="time_str2" class="time_str"></span></p>
+            <p>Событие: <span id="code_descr2" class="code_descr"></span></p>
+            <p>ФИО: <span id="FIO2" class="FIO"></span></p>
+            <p><span class="dep">Отдел: <span id="dept2" class="dept"></span></span></p>
+            <p><span class="pos">Должность: <span id="position2" class="posi"></span></span></p>
+            <p><span class="sm_t">Cмена: <span id="sm_time2" class="sm_time"></span></span><span class="sm_d"> Обед: <span id="sm_dinner2" class="sm_dinner"></span></span></p>
+        </div>
+        <div id="right_photo_stripe" class="right_photo_stripe"></div>
+        <!--div id="right_video" class="right_video">
+            <!--  <img height="300" width="400" src="../foto/video.jpg">>
+        </div-->
+    </div>
+</div>
+</body>
+</html>
